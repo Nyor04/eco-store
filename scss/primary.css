@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  min-width: 320px;
+  max-width: 425px;
+  background-color: #FFEFE7;
+  margin: 0 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+  width: 100%;
+}
+.navbar .navbar__title {
+  color: #7C6A0A;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+.navbar .navbar__menu {
+  width: 32px;
+  height: 32px;
+}
+
+.main {
+  margin-bottom: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+  align-items: center;
+  height: auto;
+}
+.main .main__picture {
+  height: 395px;
+  width: 100%;
+  background-repeat: no-repeat;
+}
+.main .main__title {
+  color: #7C6A0A;
+  font-weight: 600;
+  line-height: 26px;
+  font-size: 28px;
+  align-self: flex-start;
+}
+.main .main__text {
+  color: #7C6A0A;
+  font-weight: 400;
+  font-size: 12px;
+}
+.main .main__btn {
+  background-color: #FA9500;
+  padding: 12px 24px;
+  border-radius: 20px;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+}
+
+.healthCare {
+  margin-bottom: 32px;
+}
+.healthCare .healthCare__title {
+  color: #7C6A0A;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 26px;
+}
+.healthCare .healthCare__cardsContainer {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  height: 300px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.healthCare .healthCare__cardsContainer .healthCare__card {
+  width: 180px;
+  height: 90%;
+  background-color: #FFDAC6;
+  border-radius: 5px;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.1019607843);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  white-space: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.healthCare .healthCare__cardsContainer .healthCare__card .healthCare__img {
+  background-image: url(../assets/img/products/toothbrush.jpg);
+  background-size: cover;
+  border-radius: 4px;
+  width: 80%;
+  height: 60%;
+}
+.healthCare .healthCare__cardsContainer .healthCare__card .healthCare__cardt--Title {
+  font-weight: 600;
+  font-size: 12px;
+  color: #7C6A0A;
+}
+.healthCare .healthCare__cardsContainer .healthCare__card .healthCare__cardt--text {
+  font-weight: 400;
+  font-size: 8px;
+  width: 180px;
+  text-align: center;
+  color: #7C6A0A;
+}
+
+.furniture {
+  margin-bottom: 32px;
+}
+.furniture .furniture__title {
+  color: #7C6A0A;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 26px;
+}
+.furniture .furniture__cardsContainer {
+  display: flex;
+  gap: 16px;
+  width: 100%;
+  height: 300px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.furniture .furniture__cardsContainer .furniture__card {
+  width: 180px;
+  height: 90%;
+  background-color: #BABD8D;
+  border-radius: 5px;
+  box-shadow: 5px 5px 12px rgba(0, 0, 0, 0.1019607843);
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  white-space: wrap;
+  flex-direction: column;
+  align-items: center;
+}
+.furniture .furniture__cardsContainer .furniture__card .furniture__img {
+  background-image: url(../assets/img/furniture/wood-chair.jpg);
+  background-size: cover;
+  border-radius: 4px;
+  width: 80%;
+  height: 60%;
+}
+.furniture .furniture__cardsContainer .furniture__card .furniture__cardt--Title {
+  font-weight: 600;
+  font-size: 12px;
+  color: white;
+}
+.furniture .furniture__cardsContainer .furniture__card .furniture__cardt--text {
+  font-weight: 400;
+  font-size: 8px;
+  width: 180px;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+.aboutUs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+.aboutUs .aboutUs__title {
+  color: #7C6A0A;
+  font-weight: 500;
+  font-size: 22px;
+  align-self: flex-start;
+  margin-bottom: 24px;
+}
+.aboutUs .firstPart {
+  width: 170px;
+}
+.aboutUs .firstPart .firstPart__text {
+  color: #E86424;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+}
+.aboutUs .secondPart {
+  width: 170px;
+}
+.aboutUs .secondPart .secondPart__text {
+  color: #E86424;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+}/*# sourceMappingURL=primary.css.map */
