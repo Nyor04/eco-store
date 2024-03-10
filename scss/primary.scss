@@ -7,6 +7,8 @@ $secondary-Fontcolor:#E86424;
 $nasty-Orange:#FA9500;
 $primary-font: "IBM Plex Sans", sans-serif; //sans: regular, medium, bold = 400,500,700 respectively
 $secondary-font:"Montserrat", sans-serif; //sans: regular, medium, bold = 400,500,700 respectively
+$section-marginBottom: 32px;
+$titles-marginBottom: 26px;
 
 
 *{
@@ -18,9 +20,15 @@ $secondary-font:"Montserrat", sans-serif; //sans: regular, medium, bold = 400,50
 
 body{
      min-width: 320px;
-     max-width: 425px;
+     max-width: 470px;
      background-color: $primary-color;
-     margin: 0 30px;
+     
+}
+
+
+
+.web-margin{
+    margin: 0 30px;
 }
 
 .navbar{
@@ -37,54 +45,73 @@ body{
         text-align: center;
       
     }
-    .navbar__menu{      
+    .navbar__menu--mobile{      
         width: 32px;
         height: 32px;
     }
+    .navbar__menu--desktop{
+        display: none;
+    }
+
+   
+
 }
 
 .main{
-    margin-bottom: 32px;
+    margin-bottom: $section-marginBottom;
     display: flex;
     flex-direction: column;
     gap: 26px;
     align-items: center;
     height: auto;
-    .main__picture{
-       
-        height:395px;
-        width: 100%;
-        background-repeat: no-repeat;
-    }
-    
-    .main__title{
-        color: $primary-Fontcolor;
-        font-weight: 600;
-        line-height: 26px;
-        font-size: 28px;
-        align-self: flex-start;
-    }
-    .main__text{
-        color: $primary-Fontcolor;
-        
-        font-weight: 400;
-        font-size: 12px;
+    width: 100%;
 
+    .main__right{
+        width: 100%;
     }
-    .main__btn{
-        background-color: $nasty-Orange;
-        padding: 12px 24px;
-        border-radius: 20px;
-        text-decoration: none;
-        text-align: center;
-        color: white;
+    .main__picture{
+        background-image: url(../assets/img/main-2.jpg);
         
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 500px;
+        width: 100%;
+    }
+    .main__left{
+        display: flex;
+        flex-direction: column;
+        gap: 26px;
+
+        .main__title{
+            color: $primary-Fontcolor;
+            font-weight: 600;
+            line-height: 26px;
+            font-size: 28px;
+            align-self: flex-start;
+        }
+        .main__text{
+            color: $primary-Fontcolor;
+            
+            font-weight: 400;
+            font-size: 12px;
+    
+        }
+        .main__btn{
+            background-color: $nasty-Orange;
+            padding: 12px 24px;
+            border-radius: 20px;
+            text-decoration: none;
+            text-align: center;
+            color: white;
+            
+        }
+
     }
 }
 
 .healthCare{
 
-    margin-bottom: 32px;
+    margin-bottom: $section-marginBottom;
     
     .healthCare__title{
         color: $primary-Fontcolor;
@@ -92,7 +119,7 @@ body{
         font-weight: 500;
         font-size: 22px;
         line-height: 26px;
-        margin-bottom: 26px;
+        margin-bottom: $titles-marginBottom;
     }
     .healthCare__cardsContainer{
         display: flex;
@@ -101,8 +128,8 @@ body{
         height: 300px;
         overflow-x: auto;
         overflow-y: hidden;
-        text-overflow: ellipsis;
         white-space: nowrap;
+       
 
         .healthCare__card{
             width: 180px;
@@ -146,14 +173,14 @@ body{
 }
 
 .furniture{
-    margin-bottom: 32px;
+    margin-bottom: $section-marginBottom;
     .furniture__title{
         color: $primary-Fontcolor;
         font-family: $secondary-font;
         font-weight: 500;
         font-size: 22px;
         line-height: 26px;
-        margin-bottom: 26px;
+        margin-bottom: $titles-marginBottom;
     }
     .furniture__cardsContainer{
         display: flex;
@@ -208,46 +235,188 @@ body{
 }
 
 .aboutUs{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        gap: 12px;
-        margin-bottom: 32px;
-
+        
+    margin-bottom: $section-marginBottom;
+    width: 100%;
+    height: auto;
+        
     .aboutUs__title{
         color: $primary-Fontcolor;
         font-weight: 500;
         font-size: 22px;
         align-self: flex-start;
-        margin-bottom: 24px;
-        
-
+        margin-bottom: $titles-marginBottom;
     }
-    .firstPart{
-        width: 170px;
-
         
-        .firstPart__text{
-            color: $secondary-Fontcolor;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 18px;
-            text-align: center;
+    .aboutUs__parts{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        gap: 12px;
+        
+        .firstPart{
+            width: 170px;
+        
+            
+            .firstPart__text{
+                color: $secondary-Fontcolor;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 18px;
+                text-align: center;
+        
+            }
+        
+        }
+        .secondPart{
+            width: 170px;
+            
+            .secondPart__text{
+                color: $secondary-Fontcolor;
+                font-size: 14px;
+                font-weight: 500;
+                line-height: 18px;
+                text-align: center;
+            }
+    }
 
+
+}
+    
+}
+
+.gallery{
+    height: auto;
+    width: 100%;
+    margin-bottom: $section-marginBottom;
+
+    .gallery__title{
+        color: $primary-Fontcolor;  
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 29px;
+        text-align: left;
+        margin-bottom: $titles-marginBottom;
+        
+    }
+
+    .gallery__imagesContainer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap:32px;
+        
+
+        .gallery__img--img1{
+            background-image: url(../assets/img/gallery-1.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            height: 450px;
+            width: 100%;
+        }
+        .gallery__img--img2{
+            background-image: url(../assets/img/gallery-2.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            height: 450px;
+            width: 100%;
+        }
+        .gallery__img--img3{
+            background-image: url(../assets/img/gallery-3.jpg);
+            background-size:cover;
+            background-repeat: no-repeat;
+            height: 450px;
+            width: 100%;
         }
 
     }
-    .secondPart{
-        width: 170px;
+}
+
+.location{
+    width: 100%;
+    margin-bottom: $section-marginBottom;
+    overflow: hidden;
+    
+
+ 
+    .location__img{
+        content: url(../assets/img/map.png);
+        position:relative;
+        left:-350px;
+        margin-bottom: $titles-marginBottom;
+        border-radius: 5px;
+    }
+    
+
+    .location__title{
+        color: $primary-Fontcolor;
+        margin-bottom: $titles-marginBottom;
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 29px;
+        text-align: left;
         
-        .secondPart__text{
-            color: $secondary-Fontcolor;
-            font-size: 14px;
-            font-weight: 500;
-            line-height: 18px;
-            text-align: center;
-        }
 
     }
+    .location__name{
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 26px;
+        text-align: left;
+        color:$secondary-Fontcolor;
+        margin-bottom: $titles-marginBottom;
+
+
+    }
+    .location__direction{
+    
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+
+        text-align: left;
+        color:$secondary-Fontcolor;
+        margin-bottom: $titles-marginBottom;
+
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 35vh;
+    width: 100%;
+    background-color: $nasty-Orange;
+    padding: 15px 30px;
+    color: white;
+
+    .footer__title{
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 27px;
+        text-align: left;
+    }
+    .footer__list{
+        list-style: none;
+        line-height: 34px;
+    }
+
+    .footer__socials{
+        display: flex;
+        justify-content: flex-start;
+        gap: 24px;
+    }
+
+    
+    
+}
+@media(min-width:768px){
+
+    body{
+        margin: 0 auto; 
+        
+   }
+
 }
